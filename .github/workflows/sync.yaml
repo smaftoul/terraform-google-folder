@@ -19,3 +19,5 @@ jobs:
       with:
         repository: GoogleCloudPlatform/cloud-foundation-fabric
         path: upstream
+    - name: Split
+      run: cd upstream ; git subtree split --prefix modules/folder -b split
