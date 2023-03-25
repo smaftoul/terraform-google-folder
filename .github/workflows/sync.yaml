@@ -3,7 +3,19 @@ jobs:
   split:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout tools repo
+    - name: Checkout local repo
+      uses: actions/checkout@v3
+      with:
+        path: local
+
+    - name: Checkout upstream repo
       uses: actions/checkout@v3
       with:
         repository: GoogleCloudPlatform/cloud-foundation-fabric
+        path: upstream
+
+    - name: Checkout upstream repo
+      uses: actions/checkout@v3
+      with:
+        repository: GoogleCloudPlatform/cloud-foundation-fabric
+        path: upstream
